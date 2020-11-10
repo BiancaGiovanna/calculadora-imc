@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Calculadora IMC</string>
+    <string name="title_imc">Calcule seu IMC</string>
+    <string name="about_imc">O IMC(Índice de Massa Corporal) é um cálculo que serve para avaliar se a pessoa está dentro do seu peso ideal</string>
+    <string name="male">Masculino</string>
+    <string name="female">Feminino</string>
+    <string name="hint_altura">Digite a sua altura</string>
+    <string name="hint_peso">Digite o seu Peso</string>
+    <string name="button_calcular">Calcular</string>
+    <string name="titleResult">Resultado</string>
+    <string name="dev">Desenvolvido por Bianca Giovanna</string>
+</resources>
