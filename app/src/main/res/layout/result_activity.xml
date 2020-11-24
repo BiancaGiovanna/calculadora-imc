@@ -19,6 +19,32 @@
             android:text="@string/titleResult"
             android:textColor="@color/colorPrimary"
             android:textSize="28sp"/>
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/botao_redondo"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/resultado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="resultado"
+                android:textColor="@android:color/white"
+                android:textSize="38sp"
+                />
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="status"
+                android:textColor="@android:color/white"
+                />
+
+        </LinearLayout>
 
 
     </LinearLayout>

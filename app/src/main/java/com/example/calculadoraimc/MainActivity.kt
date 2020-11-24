@@ -9,9 +9,10 @@ import android.widget.EditText
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity(), View.OnClickListener{
-    private lateinit var  btnmale : Button
-    private lateinit var  btnfemale : Button
+    private lateinit var btnmale : Button
+    private lateinit var btnfemale : Button
 
+    private lateinit var btncalc : Button
     private lateinit var editPeso : EditText
     private lateinit var editAltura : EditText
 
@@ -23,6 +24,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
         editPeso = findViewById(R.id.peso)
         editAltura = findViewById(R.id.altura)
 
+        btncalc = findViewById(R.id.button_calc)
+        btncalc.setOnClickListener(this)
 
 
         btnmale = findViewById(R.id.male)
@@ -31,15 +34,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
         btnmale.setOnClickListener(this)
         btnfemale.setOnClickListener(this)
 
+
     }
 
-//    fun openResult(view: View) {
-//        val openActivityResult = Intent(this, activity_result::class.java)
-//
-//        startActivity(openActivityResult)
-//
-//    }
+    fun openResult(view: View) {
+        val openActivityResult = Intent(this, activity_result::class.java)
 
+        startActivity(openActivityResult)
+
+    }
 
     override fun onClick(v: View) {
         when (v.id){
@@ -60,8 +63,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
                 Toast.makeText(this, imc.toString(), Toast.LENGTH_LONG).show()
             }
         }
+        when (v.id){
+            R.id.button_calc ->{
+                val abrirActivityResult = Intent(this, activity_result::class.java)
+                abrirActivityResult.putExtra("peso", editPeso.text.toString().toDouble())
+                abrirActivityResult.putExtra("altura", editAltura.text.toString().toDouble())
+                startActivity(abrirActivityResult)
 
+            }
+        }
     }
 
-
 }
+
