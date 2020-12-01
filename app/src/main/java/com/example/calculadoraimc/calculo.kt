@@ -1,12 +1,26 @@
 package com.example.calculadoraimc
 
+import com.example.calculadoraimc.repository.Frases
 import java.text.DecimalFormat
+import java.util.*
 
 fun calcularImc(peso: Double, altura: Double) : Array<String>{
 
     val imc = peso / (altura * altura)
+    val status = obterStatus(imc)
+    return arrayOf(formatarDouble(imc), obterStatus(imc), status, obterFrases(status))
+}
 
-    return arrayOf(formatarDouble(imc), obterStatus(imc))
+fun obterFrases(status: String): String {
+    var tamanho= 0
+
+    if (status == "Peso Ideal") {
+        tamanho = Frases.frasesIdeal.size
+        return Frases.frasesIdeal[Random().nextInt(tamanho)]
+    } else {
+        tamanho = Frases.frasesNaoIdeal.size
+        return Frases.frasesNaoIdeal[Random().nextInt(tamanho)]
+    }
 }
 
 fun formatarDouble(valor:Double) : String{

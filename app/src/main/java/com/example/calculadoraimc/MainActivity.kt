@@ -60,7 +60,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
             R.id.button_calc ->{
                 val imc = calcularImc(editPeso.text.toString().toDouble(),
                     editAltura.text.toString().toDouble())
-                Toast.makeText(this, imc.toString(), Toast.LENGTH_LONG).show()
             }
         }
         when (v.id){

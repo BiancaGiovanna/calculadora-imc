@@ -11,12 +11,12 @@ class activity_result : AppCompatActivity() {
 
         val peso = intent.getDoubleExtra("peso", 0.0)
         val altura =intent.getDoubleExtra("altura", 0.0)
-        val text_view_resultado = findViewById<TextView>(R.id.resultado)
-        val text_view_status = findViewById<TextView>(R.id.status)
+        val textViewResultado = findViewById<TextView>(R.id.resultado)
+        val textViewStatus = findViewById<TextView>(R.id.status)
 
         val resultado = calcularImc(peso, altura)
 
-        text_view_resultado.text = resultado[0]
-        text_view_status.text = resultado[1]
+        textViewResultado.text = resultado[0]
+        textViewStatus.text = resultado[1]
     }
 }

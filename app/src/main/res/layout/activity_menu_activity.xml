@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu_activity"
+    android:background="@color/colorPrimaryDark">
+    <TextView
+        android:id="@+id/text_view_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saude Calc"
+        android:textAppearance="@style/titulo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="24dp"/>
+    <TextView
+        android:id="@+id/sub_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/sub_titulo"
+        android:text="Qualidade de vida para você e sua familia"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_titulo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="16dp"/>
+    <LinearLayout
+        android:id="@+id/ll_card1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintTop_toBottomOf="@id/sub_titulo"
+        android:orientation="horizontal"
+        android:padding="8dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="16dp"
+        android:layout_marginRight="4dp"
+        android:layout_weight="1"
+        app:cardBackgroundColor="@android:color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/image_ncd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/burn64"
+                android:layout_margin="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NCD"
+                android:textAppearance="@style/titulo_card"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Necessidades Calóricas Diárias"
+                android:layout_marginTop="12dp"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_marginLeft="4dp"
+            app:cardCornerRadius="16dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@android:color/white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/image_imc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/imc64"
+                    android:layout_margin="8dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IMC"
+                    android:textAppearance="@style/titulo_card"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Índice de Massa Corporal"
+                    android:layout_marginTop="12dp"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_card2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/ll_card1"
+        android:orientation="horizontal"
+        android:padding="8dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@android:color/white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/image_perfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/user"
+                    android:layout_margin="8dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perfil"
+                    android:textAppearance="@style/titulo_card"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Mantenha seus dados Atualizados"
+                    android:layout_marginTop="12dp"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_marginLeft="4dp"
+            app:cardCornerRadius="16dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@android:color/white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/image_dicas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tip"
+                    android:layout_margin="8dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DIcas"
+                    android:textAppearance="@style/titulo_card"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Confia dicas sobre a sua saúde"
+                    android:layout_marginTop="12dp"
+                    />
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
