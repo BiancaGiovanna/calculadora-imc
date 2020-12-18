@@ -14,12 +14,12 @@ fun calcularImc(peso: Double, altura: Double) : Array<String>{
 fun obterFrases(status: String): String {
     var tamanho= 0
 
-    if (status == "Peso Ideal") {
+    return if (status == "Peso Ideal") {
         tamanho = Frases.frasesIdeal.size
-        return Frases.frasesIdeal[Random().nextInt(tamanho)]
+        Frases.frasesIdeal[Random().nextInt(tamanho)]
     } else {
         tamanho = Frases.frasesNaoIdeal.size
-        return Frases.frasesNaoIdeal[Random().nextInt(tamanho)]
+        Frases.frasesNaoIdeal[Random().nextInt(tamanho)]
     }
 }
 
