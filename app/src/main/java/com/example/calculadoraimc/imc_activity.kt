@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 
-class MainActivity : AppCompatActivity(), View.OnClickListener{
+class imc_activity : AppCompatActivity(), View.OnClickListener{
     private lateinit var btnmale : Button
     private lateinit var btnfemale : Button
 
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_imc)
 
         editPeso = findViewById(R.id.peso)
         editAltura = findViewById(R.id.altura)

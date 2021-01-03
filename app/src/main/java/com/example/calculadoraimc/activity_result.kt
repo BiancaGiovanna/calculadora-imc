@@ -7,7 +7,7 @@ import android.widget.TextView
 class activity_result : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.result_activity)
+        setContentView(R.layout.result_activity_imc)
 
         val peso = intent.getDoubleExtra("peso", 0.0)
         val altura =intent.getDoubleExtra("altura", 0.0)
@@ -18,5 +18,6 @@ class activity_result : AppCompatActivity() {
 
         textViewResultado.text = resultado[0]
         textViewStatus.text = resultado[1]
+
     }
 }

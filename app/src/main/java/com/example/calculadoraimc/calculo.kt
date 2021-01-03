@@ -22,7 +22,6 @@ fun obterFrases(status: String): String {
         Frases.frasesNaoIdeal[Random().nextInt(tamanho)]
     }
 }
-
 fun formatarDouble(valor:Double) : String{
     val df = DecimalFormat("##,###.0")
     return df.format(valor)

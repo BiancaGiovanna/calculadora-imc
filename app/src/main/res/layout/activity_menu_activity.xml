@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu_activity"
+    tools:context=".main_menu_activity"
     android:background="@color/colorPrimaryDark">
     <TextView
         android:id="@+id/text_view_titulo"
@@ -76,7 +76,8 @@
             android:layout_marginLeft="4dp"
             app:cardCornerRadius="16dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="@android:color/white">
+            app:cardBackgroundColor="@android:color/white"
+            android:onClick="openImc">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
